@@ -246,6 +246,10 @@ h2 {
 .minimax-aside {
   padding: 32px 0;
   border-bottom: 1px solid #ebebeb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .minimax-note {
@@ -262,7 +266,7 @@ h2 {
 .game-wrapper {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   gap: 16px;
 }
 
