@@ -1,0 +1,386 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #1a1a1a;
+  background: #ffffff;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 28px 64px;
+}
+
+a {
+  color: #2c5282;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+section {
+  padding: 52px 0;
+  border-bottom: 1px solid #ebebeb;
+}
+
+section:last-child {
+  border-bottom: none;
+}
+
+h2 {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #2c5282;
+  margin-bottom: 28px;
+}
+
+/* ── HERO ─────────────────────────────────────────── */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 72px 0 52px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.avatar {
+  width: 116px;
+  height: 116px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 22px;
+  border: 3px solid #ebebeb;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.subtitle {
+  margin-top: 8px;
+  color: #555;
+  font-size: 1rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 22px;
+  margin-top: 22px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-links a {
+  font-size: 0.875rem;
+  color: #2c5282;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  border-bottom-color: #2c5282;
+  text-decoration: none;
+}
+
+/* ── ABOUT ────────────────────────────────────────── */
+
+#about p {
+  font-size: 0.975rem;
+  color: #333;
+  max-width: 640px;
+}
+
+/* ── RESEARCH INTERESTS ───────────────────────────── */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  background: #eef2f7;
+  color: #2c5282;
+  padding: 5px 13px;
+  border-radius: 100px;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+/* ── EXPERIENCE ───────────────────────────────────── */
+
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.exp-item {
+  padding-left: 16px;
+  border-left: 2px solid #dbe4f0;
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.exp-org {
+  font-weight: 600;
+  color: #1a1a1a;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.exp-org:hover {
+  color: #2c5282;
+  text-decoration: none;
+}
+
+.exp-dates {
+  color: #888;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.exp-role {
+  color: #666;
+  font-size: 0.875rem;
+  margin: 3px 0 7px;
+}
+
+.exp-desc {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* ── PUBLICATIONS ─────────────────────────────────── */
+
+.pub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.pub-item {
+  padding-left: 16px;
+  border-left: 2px solid #dbe4f0;
+}
+
+.pub-title {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+.pub-title:hover {
+  color: #2c5282;
+}
+
+.pub-meta {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 4px;
+}
+
+/* ── EDUCATION ────────────────────────────────────── */
+
+.edu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.edu-school {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.edu-degree {
+  color: #444;
+  font-size: 0.9rem;
+  margin-top: 2px;
+}
+
+.edu-dates {
+  color: #888;
+  font-size: 0.82rem;
+  margin-top: 2px;
+}
+
+/* ── MINIMAX GAME ─────────────────────────────────── */
+
+.game-intro {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 28px;
+  max-width: 580px;
+}
+
+.game-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+#game-status {
+  font-size: 0.875rem;
+  color: #555;
+  min-height: 20px;
+  font-variant-numeric: tabular-nums;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 84px);
+  grid-template-rows: repeat(3, 84px);
+  gap: 5px;
+}
+
+.cell {
+  background: #f7f8fa;
+  border: 1px solid #e0e4e8;
+  border-radius: 6px;
+  font-size: 2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.1s, border-color 0.1s;
+  color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.cell:hover:not(.filled) {
+  background: #eef2f7;
+  border-color: #c5d3e8;
+}
+
+.cell.x {
+  color: #2c5282;
+}
+
+.cell.o {
+  color: #9b2335;
+}
+
+.cell.filled {
+  cursor: default;
+}
+
+#reset-btn {
+  padding: 7px 22px;
+  background: transparent;
+  border: 1px solid #2c5282;
+  color: #2c5282;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.84rem;
+  font-family: inherit;
+  transition: background 0.15s, color 0.15s;
+}
+
+#reset-btn:hover {
+  background: #2c5282;
+  color: #ffffff;
+}
+
+/* ── CONTACT + QR ─────────────────────────────────── */
+
+.contact-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-links a {
+  font-size: 0.9rem;
+  color: #2c5282;
+  text-decoration: none;
+}
+
+.contact-links a:hover {
+  text-decoration: underline;
+}
+
+.qr-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.qr-wrapper img {
+  display: block;
+  border: 1px solid #e0e4e8;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.qr-label {
+  font-size: 0.75rem;
+  color: #999;
+  letter-spacing: 0.03em;
+}
+
+/* ── RESPONSIVE ───────────────────────────────────── */
+
+@media (max-width: 500px) {
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .exp-header {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .board {
+    grid-template-columns: repeat(3, 76px);
+    grid-template-rows: repeat(3, 76px);
+  }
+
+  .cell {
+    font-size: 1.75rem;
+  }
+
+  .contact-layout {
+    flex-direction: column;
+  }
+
+  .game-wrapper {
+    align-items: center;
+  }
+}
