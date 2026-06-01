@@ -22,21 +22,48 @@
         <a href="https://cenia.cl/" target="_blank" rel="noopener">CENIA</a>
       </p>
       <nav class="social-links">
-        <a href="mailto:tcouso@uc.cl">Email</a>
+        <a href="mailto:tomascousocoddou@gmail.com">Email</a>
         <a href="https://github.com/tcouso" target="_blank" rel="noopener">GitHub</a>
         <a href="https://www.linkedin.com/in/tcouso/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://scholar.google.com/citations?user=drhu0_8AAAAJ&hl=es" target="_blank" rel="noopener">Scholar</a>
       </nav>
     </section>
 
+    <!-- MINIMAX EASTER EGG -->
+    <div class="minimax-aside">
+      <p class="minimax-note">
+        Minimax search was one of the first algorithms I ever studied and implemented —
+        <a href="https://github.com/tcouso/minimax-project" target="_blank" rel="noopener">here's the code</a>.
+        You play as <strong>X</strong>.
+      </p>
+      <div class="game-wrapper">
+        <p id="game-status"></p>
+        <div class="board" id="game-board"></div>
+        <button id="reset-btn" onclick="resetGame()">Reset</button>
+      </div>
+    </div>
+
     <!-- ABOUT -->
     <section id="about">
       <h2>About</h2>
       <p>
-        Computer engineer with hands-on experience applying AI to satellite imagery, time series,
-        natural language processing, and optimal control problems. I am particularly drawn to
-        reinforcement learning and world models, and to bridging ideas from cognitive psychology
-        and neuroscience into neural architecture design.
+        My interest in intelligence started in cognitive psychology and neuroscience.
+        Switching to computer engineering was less a change of direction than a shift in method —
+        I wanted to study the same questions from a quantitative angle.
+      </p>
+      <p>
+        That path led through remote sensing: applying deep learning to satellite imagery for
+        deforestation detection and biodiversity monitoring, then to UAV-based agricultural
+        surveillance at the National Institute of Informatics in Tokyo, work that led to a
+        publication at ICRA 2025. In parallel, I contributed to
+        <a href="https://www.latamgpt.org/en" target="_blank" rel="noopener">LatamGPT</a> at CENIA —
+        Latin America's largest open multilingual LLM, a nationally prominent initiative —
+        gaining hands-on experience with large-scale distributed transformer pre-training.
+      </p>
+      <p>
+        My current focus is world models: diffusion-based policies for behavioural cloning and
+        JEPA architectures with action encoding for efficient planning. This is where my interests
+        converge — perception, learning, and decision-making in one framework.
       </p>
     </section>
 
@@ -44,12 +71,12 @@
     <section id="interests">
       <h2>Research Interests</h2>
       <div class="tags">
-        <span class="tag">Reinforcement Learning</span>
         <span class="tag">World Models</span>
-        <span class="tag">Imitation Learning</span>
+        <span class="tag">Diffusion Policy</span>
+        <span class="tag">JEPA</span>
+        <span class="tag">Reinforcement Learning</span>
         <span class="tag">Remote Sensing</span>
-        <span class="tag">UAV Control</span>
-        <span class="tag">Cognitive Architectures</span>
+        <span class="tag">Large-scale ML</span>
       </div>
     </section>
 
@@ -67,8 +94,8 @@
           </div>
           <p class="exp-role">Research Engineer · Santiago, Chile</p>
           <p class="exp-desc">
-            Working on Behavioural Cloning (Diffusion Policy) and latent-space World Models (JEPA)
-            for robotic control.
+            Working on world models for robotic control: diffusion-based policies for
+            behavioural cloning and JEPA architectures with action encoding for efficient planning.
           </p>
         </div>
 
@@ -81,8 +108,10 @@
           </div>
           <p class="exp-role">ML Engineer · Santiago, Chile</p>
           <p class="exp-desc">
-            Part of the LatamGPT project — involved in cloud-scale data processing and the design
-            and evaluation of pre-training data distribution experiments.
+            Contributed to <a href="https://www.latamgpt.org/en" target="_blank" rel="noopener">LatamGPT</a> —
+            Latin America's largest open multilingual LLM, launched to wide public recognition.
+            Worked on distributed pre-training infrastructure, data pipeline engineering at scale,
+            and pre-training distribution experiments.
           </p>
         </div>
 
@@ -95,8 +124,9 @@
           </div>
           <p class="exp-role">Research Intern · Tokyo, Japan</p>
           <p class="exp-desc">
-            Selected for the 2024 NII International Internship Program under Prof. Yusheng Ji.
-            Developed reinforcement learning methods for agricultural territory monitoring with UAVs.
+            Competitively selected for the 2024 NII International Internship Program
+            under Prof. Yusheng Ji. Developed reinforcement learning methods for UAV-based
+            agricultural territory monitoring, leading to a publication at ICRA 2025.
           </p>
         </div>
 
@@ -109,9 +139,9 @@
           </div>
           <p class="exp-role">Research Assistant · Santiago, Chile</p>
           <p class="exp-desc">
-            Built a deforestation detection system using satellite remote sensing data and Echo State
-            Networks, in collaboration with Paula Aguirre, Rodrigo Carrasco, and Javier Lopatin.
-            Published at NeurIPS 2024.
+            Built a deforestation detection system using satellite remote sensing imagery and
+            Echo State Networks, with Paula Aguirre, Rodrigo Carrasco, and Javier Lopatin.
+            Published at a NeurIPS 2024 workshop.
           </p>
         </div>
 
@@ -122,8 +152,8 @@
           </div>
           <p class="exp-role">ML Engineering Intern · Santiago, Chile</p>
           <p class="exp-desc">
-            Built a data pipeline for a land cover classification algorithm at a Chilean startup
-            focused on biodiversity monitoring and conservation.
+            Built a satellite imagery data pipeline for a land cover classification algorithm
+            at a startup focused on biodiversity monitoring and conservation.
           </p>
         </div>
 
@@ -144,7 +174,7 @@
           >
             Trajectory Planning for UAV-Based Smart Farming Using Imitation-Based Triple Deep Q-Learning
           </a>
-          <p class="pub-meta">arXiv · December 2025</p>
+          <p class="pub-meta">ICRA 2025</p>
         </div>
 
         <div class="pub-item">
@@ -156,7 +186,7 @@
           >
             Enhanced Detection of Human-Driven Forest Alterations using Echo State Networks
           </a>
-          <p class="pub-meta">NeurIPS · December 2024</p>
+          <p class="pub-meta">NeurIPS 2024 Workshop</p>
         </div>
 
       </div>
@@ -175,26 +205,16 @@
 
         <div class="edu-item">
           <p class="edu-school">Pontificia Universidad Católica de Chile</p>
-          <p class="edu-degree">BSc Psychology (incomplete) — Cognitive Psychology, Neuroscience, Social Sciences</p>
+          <p class="edu-degree">
+            Coursework in Psychology · Cognitive Psychology, Neuroscience, Social Sciences
+          </p>
           <p class="edu-dates">2016 – 2018</p>
+          <p class="edu-note">
+            A foundation that continues to inform my interest in bio-inspired architectures
+            and computational theories of intelligence.
+          </p>
         </div>
 
-      </div>
-    </section>
-
-    <!-- MINIMAX GAME -->
-    <section id="project">
-      <h2>Personal Project</h2>
-      <p class="game-intro">
-        One of my first independent projects — a tic-tac-toe AI using minimax search with
-        alpha-beta pruning, ported here to run entirely in the browser.
-        You play as <strong>X</strong>.
-        <a href="https://github.com/tcouso/minimax-project" target="_blank" rel="noopener">View source →</a>
-      </p>
-      <div class="game-wrapper">
-        <p id="game-status">Your turn (X)</p>
-        <div class="board" id="game-board"></div>
-        <button id="reset-btn" onclick="resetGame()">Reset</button>
       </div>
     </section>
 
@@ -203,7 +223,7 @@
       <h2>Contact</h2>
       <div class="contact-layout">
         <div class="contact-links">
-          <a href="mailto:tcouso@uc.cl">tcouso@uc.cl</a>
+          <a href="mailto:tomascousocoddou@gmail.com">tomascousocoddou@gmail.com</a>
           <a href="https://github.com/tcouso" target="_blank" rel="noopener">github.com/tcouso</a>
           <a href="https://www.linkedin.com/in/tcouso/" target="_blank" rel="noopener">linkedin.com/in/tcouso</a>
           <a href="https://scholar.google.com/citations?user=drhu0_8AAAAJ&hl=es" target="_blank" rel="noopener">Google Scholar</a>

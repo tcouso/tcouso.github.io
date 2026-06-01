@@ -107,6 +107,10 @@ h2 {
   max-width: 640px;
 }
 
+#about p + p {
+  margin-top: 16px;
+}
+
 /* ── RESEARCH INTERESTS ───────────────────────────── */
 
 .tags {
@@ -230,13 +234,29 @@ h2 {
   margin-top: 2px;
 }
 
-/* ── MINIMAX GAME ─────────────────────────────────── */
+.edu-note {
+  color: #888;
+  font-size: 0.82rem;
+  font-style: italic;
+  margin-top: 4px;
+}
 
-.game-intro {
-  font-size: 0.9rem;
-  color: #444;
-  margin-bottom: 28px;
-  max-width: 580px;
+/* ── MINIMAX EASTER EGG ───────────────────────────── */
+
+.minimax-aside {
+  padding: 32px 0;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.minimax-note {
+  font-size: 0.85rem;
+  color: #888;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.minimax-note a {
+  color: #2c5282;
 }
 
 .game-wrapper {
