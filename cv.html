@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Tomás Couso Coddou — CV</title>
+<style>
+  @page { size: letter; margin: 11mm 18mm; }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: "Liberation Serif", "Times New Roman", serif;
+    color: #1a1a1a;
+    background: #fff;
+    font-size: 10.2pt;
+    line-height: 1.45;
+  }
+
+  a { color: #2c5282; text-decoration: none; }
+
+  header { text-align: center; margin-bottom: 11px; }
+
+  header h1 {
+    font-size: 20pt;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .contact {
+    margin-top: 6px;
+    font-size: 9.2pt;
+    color: #555;
+  }
+
+  .contact span::after { content: " · "; color: #bbb; }
+  .contact span:last-child::after { content: ""; }
+
+  h2 {
+    font-family: "Noto Sans", "Liberation Sans", sans-serif;
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #2c5282;
+    border-bottom: 1px solid #dbe4f0;
+    padding-bottom: 4px;
+    margin: 11px 0 7px;
+  }
+
+  .entry { margin-bottom: 7px; }
+  .entry:last-child { margin-bottom: 0; }
+
+  .entry-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .org { font-weight: 700; }
+  .dates { color: #777; font-size: 9pt; white-space: nowrap; }
+  .role { color: #555; font-size: 9.4pt; font-style: italic; }
+  .desc { margin-top: 3px; color: #333; }
+
+  ol { margin-left: 16px; }
+  ol li { margin-bottom: 5px; }
+  .venue { color: #777; font-size: 9pt; }
+
+  .inline-list { color: #333; }
+  .inline-list span::after { content: "   ·   "; color: #bbb; }
+  .inline-list span:last-child::after { content: ""; }
+
+  section { break-inside: avoid; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Tomás Couso Coddou</h1>
+  <p class="contact">
+    <span>tomascousocoddou@gmail.com</span>
+    <span>Santiago, Chile</span>
+    <span><a href="https://github.com/tcouso">github.com/tcouso</a></span>
+    <span><a href="https://www.linkedin.com/in/tcouso/">linkedin.com/in/tcouso</a></span>
+  </p>
+</header>
+
+<section>
+  <h2>Research Interests</h2>
+  <p>
+    I'm interested in sequential decision-making under partial observability (MDPs and
+    POMDPs), especially motor control, where policies must be sample-efficient and adapt to
+    non-stationary environments. I approach these problems through self-supervised world
+    models, imitation learning, optimal control, and deep reinforcement learning. I take an
+    embodied view of intelligence — cognition is shaped by the body that realizes it — and I
+    anticipate that breakthroughs in motor control will translate into conceptual domains.
+  </p>
+</section>
+
+<section>
+  <h2>Education</h2>
+
+  <div class="entry">
+    <div class="entry-head">
+      <span class="org">Pontificia Universidad Católica de Chile</span>
+      <span class="dates">Mar 2019 – Dec 2024</span>
+    </div>
+    <p class="role">Professional Degree (Título Profesional), Civil Engineering in Computing · Santiago, Chile</p>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <span class="org">Pontificia Universidad Católica de Chile</span>
+      <span class="dates">Mar 2016 – Dec 2018</span>
+    </div>
+    <p class="role">B.Sc. in Psychology (incomplete) · Santiago, Chile</p>
+    <p class="desc">Coursework in cognitive psychology, neuroscience, and social sciences.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Research and Professional Experience</h2>
+
+  <div class="entry">
+    <div class="entry-head">
+      <span class="org">National Center for Artificial Intelligence (CENIA)</span>
+      <span class="dates">Apr 2026 – Present</span>
+    </div>
+    <p class="role">Research Engineer · Santiago, Chile</p>
+    <p class="desc">
+      Behavioral cloning methods (Diffusion Policy) and world models over latent states (JEPA).
+    </p>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <span class="org">National Center for Artificial Intelligence (CENIA)</span>
+      <span class="dates">Apr 2025 – Mar 2026</span>
+    </div>
+    <p class="role">Machine Learning Engineer · Santiago, Chile</p>
+    <p class="desc">
+      LatamGPT project. Contributed to cloud-based data processing and to the design and
+      evaluation of pretraining data-distribution experiments.
+    </p>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <span class="org">National Institute of Informatics</span>
+      <span class="dates">Dec 2024 – Apr 2025</span>
+    </div>
+    <p class="role">Research Intern · Tokyo, Japan</p>
+    <p class="desc">
+      Selected for the first call of the 2024 NII International Internship Program, under the
+      supervision of Prof. Yusheng Ji. Worked on reinforcement learning methods applied to
+      agricultural land monitoring using unmanned aerial vehicles (UAVs).
+    </p>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <span class="org">Pontificia Universidad Católica de Chile</span>
+      <span class="dates">Mar 2023 – Dec 2024</span>
+    </div>
+    <p class="role">Research Assistant · Santiago, Chile</p>
+    <p class="desc">
+      Implemented a deforestation detection system based on remote sensing data and Echo State
+      Networks. Research conducted with faculty members Paula Aguirre, Rodrigo Carrasco, and
+      Javier Lopatin.
+    </p>
+  </div>
+
+  <div class="entry">
+    <div class="entry-head">
+      <span class="org">Lemu</span>
+      <span class="dates">Dec 2023 – Feb 2024</span>
+    </div>
+    <p class="role">Machine Learning Engineering Intern · Santiago, Chile</p>
+    <p class="desc">
+      Implemented a data pipeline for a land-cover classification algorithm at a Chilean startup
+      focused on biodiversity monitoring and conservation.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>Publications</h2>
+  <ol>
+    <li>
+      Couso Coddou, T., et al.
+      <a href="https://arxiv.org/abs/2512.18604">Trajectory Planning for UAV-Based Smart Farming Using Imitation-Based Triple Deep Q-Learning</a>.
+      <span class="venue">ICRA 2025. arXiv:2512.18604</span>
+    </li>
+    <li>
+      Couso Coddou, T., et al.
+      <a href="https://neurips.cc/virtual/2024/100568">Enhanced Detection of Human-Driven Forest Alterations using Echo State Networks</a>.
+      <span class="venue">NeurIPS 2024 Workshop</span>
+    </li>
+  </ol>
+</section>
+
+<section>
+  <h2>Languages</h2>
+  <p class="inline-list">
+    <span>Spanish — Native</span>
+    <span>English — Advanced</span>
+  </p>
+</section>
+
+</body>
+</html>
