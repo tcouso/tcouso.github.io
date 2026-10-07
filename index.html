@@ -4,30 +4,75 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tomás Couso Coddou</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <header class="topbar">
+    <nav class="topbar-inner">
+      <a class="site-name" href="#bio">~/tcouso<span class="cursor">_</span></a>
+      <ul class="nav-links">
+        <li><a href="#bio">Bio</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <main>
 
-    <!-- HERO -->
-    <section class="hero">
-      <img
-        src="https://avatars.githubusercontent.com/u/62035756?v=4"
-        alt="Tomás Couso Coddou"
-        class="avatar"
-      />
-      <h1>Tomás Couso Coddou</h1>
-      <p class="subtitle">
-        Research Engineer ·
-        <a href="https://cenia.cl/en/home/" target="_blank" rel="noopener">CENIA</a>
-      </p>
-      <nav class="social-links">
-        <a href="mailto:tomascousocoddou@gmail.com">Email</a>
-        <a href="https://github.com/tcouso" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/tcouso/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://scholar.google.com/citations?user=drhu0_8AAAAJ&hl=es" target="_blank" rel="noopener">Scholar</a>
-        <a href="cv.pdf" target="_blank" rel="noopener">CV</a>
-      </nav>
+    <!-- BIO -->
+    <section id="bio" class="hero">
+      <div class="hero-head">
+        <img
+          src="https://avatars.githubusercontent.com/u/62035756?v=4"
+          alt="Tomás Couso Coddou"
+          class="avatar"
+        />
+        <div>
+          <p class="eyebrow">Research Engineer · <a href="https://cenia.cl/en/home/" target="_blank" rel="noopener">CENIA</a></p>
+          <h1>Tomás Couso Coddou</h1>
+          <nav class="social-links">
+            <a href="mailto:tomascousocoddou@gmail.com">Email</a>
+            <a href="https://github.com/tcouso" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://www.linkedin.com/in/tcouso/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://scholar.google.com/citations?user=drhu0_8AAAAJ&hl=es" target="_blank" rel="noopener">Scholar</a>
+            <a href="cv.pdf" target="_blank" rel="noopener">CV</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="about">
+        <p>
+          I am a Computer Science Engineer from Pontificia Universidad Católica de Chile working on machine learning, with a focus on reinforcement learning problems. I am currently a Research Engineer at <a href="https://cenia.cl/en/home/" target="_blank" rel="noopener">CENIA</a>, within its Reinforcement Learning and Robotics team. My trajectory began in neuroscience and psychology, influenced by Francisco Varela’s framework of embodied cognition. Transitioning to engineering allowed me to tackle these same systemic questions from a quantitative, computational perspective.
+        </p>
+
+        <p>
+          After finishing my degree, I set out to gain engineering experience with large-scale foundation models, and joined the team behind <a href="https://www.latamgpt.org/en" target="_blank" rel="noopener">LatamGPT</a>: a model trained to reflect the languages, expressions and contexts of Latin America rather than inherit the biases of imported systems, developed through more than 50 technical alliances across 15 countries. It <a href="https://www.gob.cl/en/news/we-launch-latam-gpt-the-first-artificial-intelligence-created-for-latin-america-and-the-caribbean/" target="_blank" rel="noopener">launched in February 2026</a> at a public ceremony led by the President of Chile. Building it gave me hands-on engineering experience with large-scale data pipelines and distributed training regimes.
+        </p>
+
+        <p>
+          Currently, my focus is on <strong>latent world models and trajectory modelling for reinforcement learning problems</strong>. Our recent work at CENIA involves diffusion-based policies for behavioral cloning and JEPA architectures with action encoding for Model Predictive Control (MPC), where learned action representations make planning stable over long horizons.
+        </p>
+      </div>
+
+      <div class="facts">
+        <div>
+          <p class="fact-label">Location</p>
+          <p>Santiago, Chile</p>
+        </div>
+        <div>
+          <p class="fact-label">Interests</p>
+          <div class="tags">
+            <span class="tag">World Models</span>
+            <span class="tag">Diffusion Policy</span>
+            <span class="tag">JEPA</span>
+            <span class="tag">Reinforcement Learning</span>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- MINIMAX EASTER EGG -->
@@ -44,38 +89,9 @@
       </div>
     </div>
 
-<!-- ABOUT -->
-<section id="about">
-  <h2>About</h2>
-  
-  <p>
-    I am a Computer Science Engineer from Pontificia Universidad Católica de Chile working on machine learning, with a focus on reinforcement learning problems. I am currently a Research Engineer at <a href="https://cenia.cl/en/home/" target="_blank" rel="noopener">CENIA</a>, within its Reinforcement Learning and Robotics team. My trajectory began in neuroscience and psychology, influenced by Francisco Varela’s framework of embodied cognition. Transitioning to engineering allowed me to tackle these same systemic questions from a quantitative, computational perspective.
-  </p>
-
-  <p>
-    After finishing my degree, I set out to gain engineering experience with large-scale foundation models, and joined the team behind <a href="https://www.latamgpt.org/en" target="_blank" rel="noopener">LatamGPT</a>: a model trained to reflect the languages, expressions and contexts of Latin America rather than inherit the biases of imported systems, developed through more than 50 technical alliances across 15 countries. It <a href="https://www.gob.cl/en/news/we-launch-latam-gpt-the-first-artificial-intelligence-created-for-latin-america-and-the-caribbean/" target="_blank" rel="noopener">launched in February 2026</a> at a public ceremony led by the President of Chile. Building it gave me hands-on engineering experience with large-scale data pipelines and distributed training regimes.
-  </p>
-
-  <p>
-    Currently, my focus is on <strong>latent world models and trajectory modelling for reinforcement learning problems</strong>. Our recent work at CENIA involves diffusion-based policies for behavioral cloning and JEPA architectures with action encoding for Model Predictive Control (MPC), where learned action representations make planning stable over long horizons.
-  </p>
-</section>
-
-
-    <!-- RESEARCH INTERESTS -->
-    <section id="interests">
-      <h2>Research Interests</h2>
-      <div class="tags">
-        <span class="tag">World Models</span>
-        <span class="tag">Diffusion Policy</span>
-        <span class="tag">JEPA</span>
-        <span class="tag">Reinforcement Learning</span>
-      </div>
-    </section>
-
     <!-- EXPERIENCE -->
     <section id="experience">
-      <h2>Experience</h2>
+      <h2><span class="sec-num">01</span>Experience</h2>
       <div class="exp-list">
 
         <div class="exp-item">
@@ -157,7 +173,7 @@
 
     <!-- PUBLICATIONS -->
     <section id="publications">
-      <h2>Publications</h2>
+      <h2><span class="sec-num">02</span>Publications</h2>
       <div class="pub-list">
 
         <div class="pub-item">
@@ -194,7 +210,7 @@
 
     <!-- EDUCATION -->
     <section id="education">
-      <h2>Education</h2>
+      <h2><span class="sec-num">03</span>Education</h2>
       <div class="edu-list">
 
         <div class="edu-item">
@@ -216,7 +232,7 @@
 
     <!-- CONTACT + QR -->
     <section id="contact">
-      <h2>Contact</h2>
+      <h2><span class="sec-num">04</span>Contact</h2>
       <div class="contact-layout">
         <div class="contact-links">
           <a href="mailto:tomascousocoddou@gmail.com">tomascousocoddou@gmail.com</a>
