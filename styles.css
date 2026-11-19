@@ -58,7 +58,7 @@ body {
 main {
   max-width: 760px;
   margin: 0 auto;
-  padding: 72px 28px 64px;
+  padding: 24px 28px 64px;
 }
 
 a {
@@ -108,10 +108,8 @@ h2::after {
 /* ── TOP BAR ──────────────────────────────────────── */
 
 .topbar {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
   z-index: 10;
   background: #15130fee;
   backdrop-filter: blur(6px);
@@ -149,9 +147,9 @@ h2::after {
 
 .nav-links {
   display: flex;
-  gap: 22px;
+  flex-wrap: wrap;
+  gap: 6px 22px;
   list-style: none;
-  overflow-x: auto;
 }
 
 .nav-links a {
@@ -536,20 +534,12 @@ h2::after {
     padding-right: 18px;
   }
 
-  .topbar-inner {
-    padding: 12px 18px;
-  }
-
-  .site-name {
+  .topbar {
     display: none;
   }
 
-  .topbar-inner {
-    font-size: 0.74rem;
-  }
-
-  .nav-links {
-    gap: 12px;
+  .hero {
+    padding-top: 32px;
   }
 
   .hero-head {
