@@ -362,10 +362,6 @@ h2::after {
   margin-top: 3px;
 }
 
-.pub-press-lang {
-  color: var(--text-faint);
-}
-
 /* ── EDUCATION ────────────────────────────────────── */
 
 .edu-list {
