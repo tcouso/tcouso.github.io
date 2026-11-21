@@ -38,6 +38,8 @@
     color: #555;
   }
 
+  .contact + .contact { margin-top: 2px; }
+
   .contact span::after { content: " · "; color: #bbb; }
   .contact span:last-child::after { content: ""; }
 
@@ -67,6 +69,7 @@
   .dates { color: #777; font-size: 9pt; white-space: nowrap; }
   .role { color: #555; font-size: 9.4pt; font-style: italic; }
   .desc { margin-top: 3px; color: #333; }
+  ul.desc { margin-left: 16px; }
 
   ol { margin-left: 16px; }
   ol li { margin-bottom: 5px; }
@@ -76,7 +79,9 @@
   .inline-list span::after { content: "   ·   "; color: #bbb; }
   .inline-list span:last-child::after { content: ""; }
 
-  section { break-inside: avoid; }
+  .entry, li, .interests p { break-inside: avoid; }
+  h2 { break-after: avoid; }
+  .interests p + p { margin-top: 5px; }
 </style>
 </head>
 <body>
@@ -86,18 +91,30 @@
   <p class="contact">
     <span>tomascousocoddou@gmail.com</span>
     <span>Santiago, Chile</span>
+  </p>
+  <p class="contact">
     <span><a href="https://github.com/tcouso">github.com/tcouso</a></span>
     <span><a href="https://www.linkedin.com/in/tcouso/">linkedin.com/in/tcouso</a></span>
+    <span><a href="https://scholar.google.com/citations?user=drhu0_8AAAAJ&amp;hl=es">Google Scholar</a></span>
   </p>
 </header>
 
-<section>
+<section class="interests">
   <h2>Research Interests</h2>
   <p>
-    I'm interested in sequential decision-making under partial observability (MDPs and
-    POMDPs), especially motor control, where policies must be sample-efficient and adapt to
-    non-stationary environments. I take an
-    embodied view of intelligence: cognition is shaped by the body that realizes it.
+    I study sequential decision-making with learned world models, especially for motor control.
+    My central question is what an action is in latent space: how it relates to the body
+    executing it and to the perceptual change it causes. My current work asks how to make learned world models and planners fit each other, so that
+    what the model learns is what the planner needs at decision time.
+  </p>
+  <p>
+    I bring experience in deep
+    RL for UAV control, remote sensing for environmental monitoring, and large-scale LLM pretraining
+    with LatamGPT, where I learned how data
+    distribution and infrastructure shape models at scale. Longer term, I want to scale world models
+    into agents that act in open, changing environments, such as field robots for ecosystem
+    monitoring and restoration. I first came to AI from psychology and take an embodied view of
+    intelligence: cognition is shaped by the body that realizes it.
   </p>
 </section>
 
@@ -106,15 +123,16 @@
 
   <div class="entry">
     <div class="entry-head">
-      <span class="org">Pontificia Universidad Católica de Chile</span>
+      <a class="org" href="https://www.uc.cl/en/">Pontificia Universidad Católica de Chile</a>
       <span class="dates">Mar 2019 – Dec 2024</span>
     </div>
-    <p class="role">Professional Degree (Título Profesional), Civil Engineering in Computing · Santiago, Chile</p>
+    <p class="role">Professional Title in Computer Science Engineering (Ingeniero Civil de Computación), 6-year program · Santiago, Chile</p>
+    <p class="desc">Includes B.Sc. in Engineering (Licenciatura en Ciencias de la Ingeniería), Major in Computing and Information Systems.</p>
   </div>
 
   <div class="entry">
     <div class="entry-head">
-      <span class="org">Pontificia Universidad Católica de Chile</span>
+      <a class="org" href="https://www.uc.cl/en/">Pontificia Universidad Católica de Chile</a>
       <span class="dates">Mar 2016 – Dec 2018</span>
     </div>
     <p class="role">B.Sc. in Psychology (incomplete) · Santiago, Chile</p>
@@ -127,62 +145,69 @@
 
   <div class="entry">
     <div class="entry-head">
-      <span class="org">National Center for Artificial Intelligence (CENIA)</span>
+      <a class="org" href="https://cenia.cl/en/home/">National Center for Artificial Intelligence (CENIA)</a>
       <span class="dates">Apr 2026 – Present</span>
     </div>
-    <p class="role">Research Engineer · Santiago, Chile</p>
-    <p class="desc">
-      Behavioral cloning methods (Diffusion Policy) and world models over latent states (JEPA).
-    </p>
+    <p class="role">Research Engineer · Team lead: <a href="https://scholar.google.com/citations?user=0gXva0YAAAAJ&amp;hl=en">Cristian Buc</a> · Santiago, Chile</p>
+    <ul class="desc">
+      <li>Research on aligning JEPA world models with sampling-based planners (e.g., CEM).</li>
+      <li>Developing diffusion-based behavioral cloning methods.</li>
+      <li>Applied project on communication strategies between LLMs.</li>
+    </ul>
   </div>
 
   <div class="entry">
     <div class="entry-head">
-      <span class="org">National Center for Artificial Intelligence (CENIA)</span>
+      <a class="org" href="https://cenia.cl/en/home/">National Center for Artificial Intelligence (CENIA)</a>
       <span class="dates">Apr 2025 – Mar 2026</span>
     </div>
-    <p class="role">Machine Learning Engineer · Santiago, Chile</p>
-    <p class="desc">
-      LatamGPT project. Contributed to cloud-based data processing and to the design and
-      evaluation of pretraining data-distribution experiments.
-    </p>
+    <p class="role">Machine Learning Engineer · Project lead: <a href="https://scholar.google.com/citations?user=gOVVRk4AAAAJ&amp;hl=en">Álvaro Soto</a> · Santiago, Chile</p>
+    <ul class="desc">
+      <li><a href="https://www.latamgpt.org/en">LatamGPT</a>: Latin America's largest open multilingual LLM (continual
+        pretraining of Llama 3.1 70B), publicly <a href="https://www.gob.cl/en/news/we-launch-latam-gpt-the-first-artificial-intelligence-created-for-latin-america-and-the-caribbean/">launched in February 2026</a>.</li>
+      <li>Owned the path from the raw scored corpus to pretraining: designed the data mixture (how much
+        of each source) and sampled and merged it with PySpark on AWS Glue into the 203B-token training
+        set (<a href="https://www.latamgpt.org/downloads/latamgpt-report.pdf">Technical Report</a> §2.1.3).</li>
+      <li>Built the distributed tokenization and packing pipeline (64-pod Kubernetes job on AWS) that
+        served the data to pretraining; packing cut padding overhead from 86.6% to 12.7% (§2.1.2).</li>
+      <li>Mixture changes were the main lever for pretraining iterations; worked with the training team
+        on mixture, curriculum and replay variants, benchmarking adaptation and forgetting on
+        multi-node SageMaker runs.</li>
+    </ul>
   </div>
 
   <div class="entry">
     <div class="entry-head">
-      <span class="org">National Institute of Informatics</span>
+      <a class="org" href="https://www.nii.ac.jp/en/">National Institute of Informatics</a>
       <span class="dates">Dec 2024 – Apr 2025</span>
     </div>
     <p class="role">Research Intern · Tokyo, Japan</p>
     <p class="desc">
-      Selected for the first call of the 2024 NII International Internship Program, under the
-      supervision of Prof. Yusheng Ji. Worked on reinforcement learning methods applied to
-      agricultural land monitoring using unmanned aerial vehicles (UAVs).
+      Competitively selected for the first call of the <a href="https://www.nii.ac.jp/en/about/international/mouresearch/">2024 NII International Internship Program</a> (supervisor:
+      Prof. <a href="https://scholar.google.com/citations?user=3EK_RaQAAAAJ&amp;hl=en">Yusheng Ji</a>). Contributed to an imitation-guided deep Q-learning method for UAV
+      trajectory planning in agricultural monitoring (third author, ICRA 2026).
     </p>
   </div>
 
   <div class="entry">
     <div class="entry-head">
-      <span class="org">Pontificia Universidad Católica de Chile</span>
+      <a class="org" href="https://www.uc.cl/en/">Pontificia Universidad Católica de Chile</a>
       <span class="dates">Mar 2023 – Dec 2024</span>
     </div>
     <p class="role">Research Assistant · Santiago, Chile</p>
     <p class="desc">
-      Implemented a deforestation detection system based on remote sensing data and Echo State
-      Networks. Research conducted with faculty members Paula Aguirre, Rodrigo Carrasco, and
-      Javier Lopatin.
+      Deforestation detection from remote sensing with Echo State Networks (with Profs. <a href="https://scholar.google.com/citations?user=74k6Df8AAAAJ&amp;hl=es">Aguirre</a>, <a href="https://scholar.google.com/citations?user=9kePLCQAAAAJ&amp;hl=en">Carrasco</a>, <a href="https://scholar.google.com/citations?user=sysQUHsAAAAJ&amp;hl=es">Lopatin</a>).
     </p>
   </div>
 
   <div class="entry">
     <div class="entry-head">
-      <span class="org">Lemu</span>
+      <a class="org" href="https://le.mu/">Lemu</a>
       <span class="dates">Dec 2023 – Feb 2024</span>
     </div>
     <p class="role">Machine Learning Engineering Intern · Santiago, Chile</p>
     <p class="desc">
-      Implemented a data pipeline for a land-cover classification algorithm at a Chilean startup
-      focused on biodiversity monitoring and conservation.
+      Data pipeline for land-cover classification at a biodiversity-monitoring startup.
     </p>
   </div>
 </section>
@@ -191,23 +216,34 @@
   <h2>Publications</h2>
   <ol>
     <li>
-      Couso Coddou, T., et al.
+      Mao, W., Zhou, Q., <strong>Couso Coddou, T.</strong>, Tsukada, M., Liu, Y., <a href="https://scholar.google.com/citations?user=3EK_RaQAAAAJ&amp;hl=en">Ji, Y.</a>
       <a href="https://arxiv.org/abs/2512.18604">Trajectory Planning for UAV-Based Smart Farming Using Imitation-Based Triple Deep Q-Learning</a>.
       <span class="venue">ICRA 2026. arXiv:2512.18604</span>
     </li>
     <li>
-      Couso Coddou, T., et al.
+      <strong>Couso Coddou, T.</strong>, <a href="https://scholar.google.com/citations?user=74k6Df8AAAAJ&amp;hl=es">Aguirre, P.</a>, <a href="https://scholar.google.com/citations?user=9kePLCQAAAAJ&amp;hl=en">Carrasco, R.</a>, <a href="https://scholar.google.com/citations?user=sysQUHsAAAAJ&amp;hl=es">Lopatin, J.</a>
       <a href="https://neurips.cc/virtual/2024/100568">Enhanced Detection of Human-Driven Forest Alterations using Echo State Networks</a>.
-      <span class="venue">NeurIPS 2024 Workshop</span>
+      <span class="venue">NeurIPS 2024 Workshop on Tackling Climate Change with Machine Learning.</span>
+    </li>
+    <li>
+      Florez, O. U., Aspillaga, C., Arriagada, G., Cifuentes, S., Fuentes, G., García, A., Herrera-Berg, E.,
+      Torres, R., Arriagada, A., Cifuentes, M., <strong>Couso, T.</strong>, et al. (22 authors)
+      <a href="https://www.latamgpt.org/downloads/latamgpt-report.pdf">LatamGPT 70B Technical Report</a>.
+      <span class="venue">Technical report, CENIA, June 2026.</span>
     </li>
   </ol>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <p>Python, PyTorch, PySpark, Kubernetes, multi-GPU training on cloud clusters</p>
 </section>
 
 <section>
   <h2>Languages</h2>
   <p class="inline-list">
     <span>Spanish — Native</span>
-    <span>English — Advanced</span>
+    <span>English — C1 (TOEFL 5.5/6)</span>
   </p>
 </section>
 
