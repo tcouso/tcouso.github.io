@@ -102,19 +102,13 @@
 <section class="interests">
   <h2>Research Interests</h2>
   <p>
-    I am interested in sequential decision-making with learned world models, especially for motor
-    control. In particular, I want to study exploration within planning, where the agent chooses
-    actions specifically to increase the world model's knowledge of the environment. I first came to
-    AI from cognitive science and take an embodied view of intelligence: cognition is shaped by the
-    body that realizes it.
-  </p>
-  <p>
-    I bring experience in deep
-    RL for UAV control, remote sensing for environmental monitoring, and 70B-parameter LLM pretraining
-    with LatamGPT, where I learned how data
-    distribution and infrastructure shape models at scale. Longer term, I want to scale world models
-    into agents that act in open, changing environments, such as field robots for ecosystem
-    monitoring and restoration.
+    I came to AI from cognitive science and take an embodied view of intelligence. My current focus is on
+    latent world models and planning, especially for motor control. I am also interested in
+    exploration within planning, where the agent chooses actions to increase the world model's
+    knowledge of the environment. My research experience covers planner-aligned action spaces for JEPA
+    world models, deep RL for UAV control, and remote sensing for environmental monitoring. In the
+    future, I'd like to scale this into agents that keep learning in open, changing environments, such
+    as field robots for ecosystem monitoring and restoration.
   </p>
 </section>
 
@@ -150,9 +144,9 @@
     </div>
     <p class="role">Research Engineer · Team lead: <a href="https://scholar.google.com/citations?user=0gXva0YAAAAJ&amp;hl=en">Cristian Buc</a> · Santiago, Chile</p>
     <ul class="desc">
-      <li>Research on aligning JEPA world models with sampling-based planners (e.g., CEM).</li>
-      <li>Developing diffusion-based behavioral cloning methods.</li>
-      <li>Applied project on communication strategies between LLMs.</li>
+      <li>First author of <a href="https://arxiv.org/abs/2611.26825">Skill-JEPA</a>. Designed and implemented a state-conditioned VAE over short action sequences, trained end-to-end with JEPA world models, so planners search over skills instead of raw actions. Across four benchmarks, three world models and four planners, success on goals 80 steps away rose from 42% to 62% on average.</li>
+      <li>Implemented diffusion-based behavioral cloning policies and designed the experiments in simulated control tasks.</li>
+      <li>Developing a library for transferring KV caches between LLMs so the receiving model skips prefill, with modular pipeline stages for different transfer strategies. Runs on multi-GPU setups.</li>
     </ul>
   </div>
 
@@ -216,6 +210,11 @@
   <h2>Publications</h2>
   <ol>
     <li>
+      <strong>Couso Coddou, T.</strong>, Devia, C., Liu, R. G., Toro Icarte, R.
+      <a href="https://arxiv.org/abs/2611.26825">Skill-JEPA: Learning Planner-Aligned Action Spaces for World Models</a>.
+      <span class="venue">arXiv preprint. arXiv:2611.26825</span>
+    </li>
+    <li>
       Mao, W., Zhou, Q., <strong>Couso Coddou, T.</strong>, Tsukada, M., Liu, Y., <a href="https://scholar.google.com/citations?user=3EK_RaQAAAAJ&amp;hl=en">Ji, Y.</a>
       <a href="https://arxiv.org/abs/2512.18604">Trajectory Planning for UAV-Based Smart Farming Using Imitation-Based Triple Deep Q-Learning</a>.
       <span class="venue">ICRA 2026. arXiv:2512.18604</span>
@@ -236,7 +235,7 @@
 
 <section>
   <h2>Skills</h2>
-  <p>Python, PyTorch, PySpark, Kubernetes</p>
+  <p>Python, PyTorch, PySpark, Kubernetes, AWS (Glue, SageMaker), Slurm</p>
 </section>
 
 <section>
