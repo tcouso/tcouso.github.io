@@ -381,6 +381,15 @@ h2::after {
   margin-top: 2px;
 }
 
+.edu-bullets {
+  margin: 6px 0;
+  padding-left: 18px;
+}
+
+.edu-bullets li + li {
+  margin-top: 6px;
+}
+
 .edu-dates {
   font-family: var(--mono);
   color: var(--text-faint);
